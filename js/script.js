@@ -180,16 +180,4 @@ $.ready.then(function(){
 				duration: 3000
 	});
 
-	// Background animation (particleground)
-	$('.wrapper').particleground({
-		dotColor: '#6B6B6B',
-		lineColor: '#6B6B6B',
-		density: 6000,
-		parallax: false
-	});
-	$('.content').css({
-		position: 'absolute',
-		top: '0'
-	});
-
 });
