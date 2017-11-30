@@ -156,6 +156,7 @@ $.ready.then(function(){
 
 		// Button click animation
 		$('input[value=\"' + buttonPressed + '\"]').parent('td')
+			.stop()
 			.animate({
 				opacity: '0.7'
 			}, {
@@ -165,8 +166,7 @@ $.ready.then(function(){
 				opacity: '1'
 			}, {
 				duration: 300
-		});
-
+			});
 	});
 
 
