@@ -6,6 +6,8 @@ $.ready.then(function(){
 		operation = null,
 		info = null;
 
+	updateScreen(currentEntry,info);
+
 	function updateScreen(displayValue,infoValue) {
 		$('.screen').html(displayValue);
 		$('.screen-info').html(infoValue);
@@ -53,7 +55,7 @@ $.ready.then(function(){
 	};
 
 	function NumberLengthExceeded() {
-		if ( (currentEntry > 999999999999) | (currentEntry < -999999999999)) {
+		if ( (currentEntry > 999999999999) | (currentEntry < -99999999999)) {
 			ClearAll();
 			info = 'number length exceeded'
 			return true;
@@ -65,8 +67,6 @@ $.ready.then(function(){
 		if (prevEntry !== null) return true;
 		return false;
 	};
-
-	updateScreen(currentEntry,info);
 
 	$('.button').click( function() {
 		var buttonPressed = $(this).val();
